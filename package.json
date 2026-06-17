@@ -1,0 +1,55 @@
+{
+  "name": "@1list/tokenlist",
+  "version": "1.0.0",
+  "description": "1list — aggregated token lists for Ethereum, BSC, Base and Solana",
+  "type": "module",
+  "main": "./dist/src/index.js",
+  "types": "./dist/src/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/src/index.js",
+      "types": "./dist/src/index.d.ts"
+    },
+    "./ethereum": "./lists/ethereum.tokenlist.json",
+    "./bsc": "./lists/bsc.tokenlist.json",
+    "./base": "./lists/base.tokenlist.json",
+    "./solana": "./lists/solana.tokenlist.json",
+    "./all": "./lists/all.tokenlist.json"
+  },
+  "scripts": {
+    "dev": "tsx scripts/dev.ts",
+    "build": "tsc && node dist/scripts/build.js",
+    "build:ts": "tsc",
+    "build:lists": "node dist/scripts/build.js",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "files": [
+    "dist/src",
+    "lists",
+    "config"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "tokenlist",
+    "ethereum",
+    "bsc",
+    "base",
+    "solana",
+    "uniswap",
+    "pancakeswap",
+    "coingecko",
+    "1inch",
+    "jupiter",
+    "1meme",
+    "dexscreener"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^25.9.3",
+    "tsx": "^4.22.4",
+    "typescript": "^6.0.3"
+  }
+}
