@@ -18,15 +18,12 @@ export const jupiterSource: TokenSource = {
   async fetch() {
     log('→ Jupiter');
 
-    const [strict, all] = await Promise.all([
-      fetchJson<JupiterToken[]>('https://token.jup.ag/strict', 'Jupiter strict'),
-      fetchJson<JupiterToken[]>('https://token.jup.ag/all',    'Jupiter all'),
-    ]);
+    const strict = await fetchJson<JupiterToken[]>('https://token.jup.ag/strict', 'Jupiter strict');
 
     const seen = new Set<string>();
     const tokens: Token[] = [];
 
-    for (const raw of [...(strict ?? []), ...(all ?? [])]) {
+    for (const raw of (strict ?? [])) {
       if (!raw.address || seen.has(raw.address)) continue;
       seen.add(raw.address);
       const n = normalizeSolana({ ...raw }, this.id);

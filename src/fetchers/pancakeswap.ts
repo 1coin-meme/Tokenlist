@@ -14,7 +14,6 @@ interface PancakeTokenList {
 }
 
 const URLS = [
-  'https://tokens.pancakeswap.finance/pancakeswap-extended.json',
   'https://tokens.pancakeswap.finance/pancakeswap-default.json',
 ];
 
