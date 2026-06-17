@@ -6,6 +6,7 @@ import { oneInchSource }     from './fetchers/oneinch.js';
 import { jupiterSource }     from './fetchers/jupiter.js';
 import { oneMemeSource }     from './fetchers/onememe.js';
 import { dexScreenerSource } from './fetchers/dexscreener.js';
+import { dflowSource }       from './fetchers/dflow.js';
 
 /**
  * Default set of token sources shipped with 1list.
@@ -25,4 +26,5 @@ export const defaultSources: TokenSource[] = [
   jupiterSource,
   oneMemeSource,
   dexScreenerSource,
+  dflowSource,
 ];

@@ -24,6 +24,7 @@ export { oneInchSource }     from './fetchers/oneinch.js';
 export { jupiterSource }     from './fetchers/jupiter.js';
 export { oneMemeSource }     from './fetchers/onememe.js';
 export { dexScreenerSource } from './fetchers/dexscreener.js';
+export { dflowSource }       from './fetchers/dflow.js';
 
 // Utilities for building custom sources
 export { buildTokenList, deduplicate, normalizeEvm, normalizeSolana } from './utils.js';
