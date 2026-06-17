@@ -1,6 +1,6 @@
 {
   "name": "1list Ethereum",
-  "timestamp": "2026-06-17T21:31:00.806Z",
+  "timestamp": "2026-06-17T23:44:48.134Z",
   "version": {
     "major": 1,
     "minor": 0,
@@ -40489,7 +40489,7 @@
     },
     {
       "chainId": 1,
-      "address": "0x3898257dd2cd6d2a3b6e3435f73568a725262b9b",
+      "address": "0x1632af961d661ec526ba67b71b326cbe157285f2",
       "name": "MAGA Bitcoin",
       "symbol": "MBTC",
       "decimals": 18,

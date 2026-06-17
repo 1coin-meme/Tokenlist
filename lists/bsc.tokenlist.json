@@ -1,6 +1,6 @@
 {
   "name": "1list BNB Smart Chain",
-  "timestamp": "2026-06-17T21:31:00.833Z",
+  "timestamp": "2026-06-17T23:44:48.149Z",
   "version": {
     "major": 1,
     "minor": 0,
@@ -14126,6 +14126,25 @@
     },
     {
       "chainId": 56,
+      "address": "0xf05eef69b1d457c88571a50e8354db710bbc1111",
+      "name": "DArK",
+      "symbol": "DARK",
+      "decimals": 18,
+      "logoURI": "https://ipfs.io/ipfs/bafkreierg7i3xqhsl53ikv522hbaaq66ejiyvqcokmbbj5lfaf5mc3ged4",
+      "tags": [
+        "meme",
+        "1meme"
+      ],
+      "extensions": {
+        "sources": [
+          "1meme"
+        ],
+        "tokenType": "STANDARD",
+        "migrated": false
+      }
+    },
+    {
+      "chainId": 56,
       "address": "0xcfc416b8d7937e77ac2e461afe1abea34d874444",
       "name": "Darkbet",
       "symbol": "DARKBET",
@@ -23252,6 +23271,25 @@
     },
     {
       "chainId": 56,
+      "address": "0xc35827dd055728d10b594813100b9cc683711111",
+      "name": "Horse",
+      "symbol": "HORSE",
+      "decimals": 18,
+      "logoURI": "https://ipfs.io/ipfs/bafybeie6jmsxzrvo3tbvvctmkitmh37zrqzxcrc23nehuc3frgcbpprmie",
+      "tags": [
+        "meme",
+        "1meme"
+      ],
+      "extensions": {
+        "sources": [
+          "1meme"
+        ],
+        "tokenType": "REFLECTION",
+        "migrated": false
+      }
+    },
+    {
+      "chainId": 56,
       "address": "0x4FA7163E153419E0E1064e418dd7A99314Ed27b6",
       "name": "Hot Cross Token",
       "symbol": "HOTCROSS",
@@ -25678,6 +25716,25 @@
         "sources": [
           "coingecko"
         ]
+      }
+    },
+    {
+      "chainId": 56,
+      "address": "0xbf1f24171881a60d4e55ff47dc59537f8c8d1111",
+      "name": "KATHRA",
+      "symbol": "KATHRA",
+      "decimals": 18,
+      "logoURI": "https://ipfs.io/ipfs/bafkreibalipteylt72sqenqlfdjz3y3hhjkk4nrwht25jbvtvlhzmw6mwy",
+      "tags": [
+        "meme",
+        "1meme"
+      ],
+      "extensions": {
+        "sources": [
+          "1meme"
+        ],
+        "tokenType": "TAX",
+        "migrated": false
       }
     },
     {
@@ -40083,6 +40140,44 @@
         "sources": [
           "coingecko"
         ]
+      }
+    },
+    {
+      "chainId": 56,
+      "address": "0xbd7a262a8989eb4da19a9c25b7362c7617521111",
+      "name": "RUFF",
+      "symbol": "RUFF",
+      "decimals": 18,
+      "logoURI": "https://ipfs.io/ipfs/bafybeiavakuqe275mp7l5x7dr6crncp4ob4glznslfrbghdnxfscz62ztu",
+      "tags": [
+        "meme",
+        "1meme"
+      ],
+      "extensions": {
+        "sources": [
+          "1meme"
+        ],
+        "tokenType": "TAX",
+        "migrated": false
+      }
+    },
+    {
+      "chainId": 56,
+      "address": "0xcb2d3788378087268ccac7ca38183cd8fadb1111",
+      "name": "Ruff2",
+      "symbol": "RUFF2",
+      "decimals": 18,
+      "logoURI": "https://ipfs.io/ipfs/bafybeiavakuqe275mp7l5x7dr6crncp4ob4glznslfrbghdnxfscz62ztu",
+      "tags": [
+        "meme",
+        "1meme"
+      ],
+      "extensions": {
+        "sources": [
+          "1meme"
+        ],
+        "tokenType": "TAX",
+        "migrated": false
       }
     },
     {

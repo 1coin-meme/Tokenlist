@@ -14,7 +14,7 @@ interface JupiterToken {
 
 const DFLOW_PROD = 'https://quote-api.dflow.net/tokens';
 const DFLOW_DEV  = 'https://dev-quote-api.dflow.net/tokens';
-const JUPITER_ALL = 'https://token.jup.ag/all';
+const JUPITER_STRICT = 'https://token.jup.ag/strict';
 
 async function get<T>(url: string, headers?: Record<string, string>): Promise<T | null> {
   try {
@@ -46,7 +46,7 @@ export const dflowSource: TokenSource = {
 
     const [addresses, jupiterTokens] = await Promise.all([
       get<string[]>(dflowUrl, dflowHeaders),
-      get<JupiterToken[]>(JUPITER_ALL),
+      get<JupiterToken[]>(JUPITER_STRICT),
     ]);
 
     if (!addresses?.length || !jupiterTokens?.length) {
