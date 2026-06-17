@@ -1,5 +1,4 @@
 {
-  "buildCommand": "echo 'Serving pre-built lists'",
   "outputDirectory": "lists",
   "rewrites": [
     { "source": "/",         "destination": "/all.tokenlist.json" },
