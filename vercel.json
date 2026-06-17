@@ -1,3 +1,11 @@
 {
-  "outputDirectory": "lists"
+  "outputDirectory": "lists",
+  "rewrites": [
+    { "source": "/",         "destination": "/all.tokenlist.json" },
+    { "source": "/all",      "destination": "/all.tokenlist.json" },
+    { "source": "/ethereum", "destination": "/ethereum.tokenlist.json" },
+    { "source": "/bsc",      "destination": "/bsc.tokenlist.json" },
+    { "source": "/base",     "destination": "/base.tokenlist.json" },
+    { "source": "/solana",   "destination": "/solana.tokenlist.json" }
+  ]
 }
