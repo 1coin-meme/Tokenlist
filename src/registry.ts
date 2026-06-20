@@ -3,28 +3,18 @@ import { uniswapSource }     from './fetchers/uniswap.js';
 import { pancakeSwapSource } from './fetchers/pancakeswap.js';
 import { coinGeckoSource }   from './fetchers/coingecko.js';
 import { oneInchSource }     from './fetchers/oneinch.js';
-import { jupiterSource }     from './fetchers/jupiter.js';
-import { oneMemeSource }     from './fetchers/onememe.js';
 import { dexScreenerSource } from './fetchers/dexscreener.js';
-import { dflowSource }       from './fetchers/dflow.js';
 
 /**
- * Default set of token sources shipped with 1list.
- * Pass a filtered or extended copy to runPipeline() to customise behaviour:
- *
- *   // add a custom source
- *   const sources = [...defaultSources, mySource];
- *
- *   // remove a source
- *   const sources = defaultSources.filter(s => s.id !== 'jupiter');
+ * Strict token sources: a token must appear in ALL four core lists for its
+ * chain (1inch + Uniswap + PancakeSwap + CoinGecko for EVM; Uniswap +
+ * PancakeSwap for Solana).  DexScreener entries always pass through regardless
+ * of cross-source coverage.
  */
 export const defaultSources: TokenSource[] = [
   uniswapSource,
   pancakeSwapSource,
   coinGeckoSource,
   oneInchSource,
-  jupiterSource,
-  oneMemeSource,
   dexScreenerSource,
-  dflowSource,
 ];
