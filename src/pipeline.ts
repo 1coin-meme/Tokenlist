@@ -9,13 +9,13 @@ export interface PipelineResult {
   unified: TokenList;
 }
 
-// A token must appear in ALL of these sources for its chain to be included,
-// unless it was explicitly listed in DexScreener (which always gets a free pass).
-const REQUIRED_SOURCES: Record<number, string[]> = {
-  1:    ['1inch', 'uniswap', 'pancakeswap', 'coingecko'],
-  56:   ['1inch', 'uniswap', 'pancakeswap', 'coingecko'],
-  8453: ['1inch', 'uniswap', 'pancakeswap', 'coingecko'],
-  101:  ['uniswap', 'pancakeswap'],
+// EVM tokens must appear in at least 3 of the 4 candidate sources for their
+// chain; Solana tokens must appear in both. DexScreener always bypasses the filter.
+const CHAIN_FILTER: Record<number, { sources: string[]; min: number }> = {
+  1:    { sources: ['1inch', 'uniswap', 'pancakeswap', 'coingecko'], min: 3 },
+  56:   { sources: ['1inch', 'uniswap', 'pancakeswap', 'coingecko'], min: 3 },
+  8453: { sources: ['1inch', 'uniswap', 'pancakeswap', 'coingecko'], min: 3 },
+  101:  { sources: ['uniswap', 'pancakeswap', 'jupiter', 'coingecko'], min: 2 },
 };
 
 export async function runPipeline(
@@ -38,9 +38,9 @@ export async function runPipeline(
   const strictTokens = allTokens.filter(t => {
     const srcs = new Set(t.extensions.sources);
     if (srcs.has('dexscreener')) return true; // explicit allowlist bypass
-    const required = REQUIRED_SOURCES[t.chainId];
-    if (!required) return false;
-    return required.every(s => srcs.has(s));
+    const filter = CHAIN_FILTER[t.chainId];
+    if (!filter) return false;
+    return filter.sources.filter(s => srcs.has(s)).length >= filter.min;
   });
 
   log(`Total unique tokens (before strict filter): ${allTokens.length}`);
