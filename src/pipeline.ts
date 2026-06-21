@@ -37,7 +37,7 @@ export async function runPipeline(
 
   const strictTokens = allTokens.filter(t => {
     const srcs = new Set(t.extensions.sources);
-    if (srcs.has('dexscreener')) return true; // explicit allowlist bypass
+    if (srcs.has('dexscreener') || srcs.has('onememe')) return true; // explicit allowlist bypass
     const filter = CHAIN_FILTER[t.chainId];
     if (!filter) return false;
     return filter.sources.filter(s => srcs.has(s)).length >= filter.min;
